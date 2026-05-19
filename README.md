@@ -1,4 +1,4 @@
-# 🛡️ AI-Powered Complaint Management System (AIFSD ESE) 🤖✨
+# 🛡️ AI-Powered Complaint Management System 🤖✨
 
 Welcome to the **AI-Powered Complaint Management System**! This is a state-of-the-art MERN stack web application designed to streamline civic and organizational grievance registration. Using Artificial Intelligence, it automatically analyzes, summarizes, prioritizes, and routes complaints to the appropriate departments.
 
