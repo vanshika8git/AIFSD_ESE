@@ -251,10 +251,36 @@ const filterByCategory = async (req, res) => {
         });
     }
 };
+
+// ================= DELETE COMPLAINT =================
+
+const deleteComplaint = async (req, res) => {
+    try {
+        const complaint = await Complaint.findById(req.params.id);
+
+        if (!complaint) {
+            return res.status(404).json({
+                message: "Complaint Not Found"
+            });
+        }
+
+        await Complaint.findByIdAndDelete(req.params.id);
+
+        res.status(200).json({
+            message: "Complaint Deleted Successfully"
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        });
+    }
+};
+
 module.exports = {
     addComplaint,
     getComplaints,
     updateComplaintStatus,
     searchComplaint,
-    filterByCategory
+    filterByCategory,
+    deleteComplaint
 };

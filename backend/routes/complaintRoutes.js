@@ -32,7 +32,8 @@ const {
     getComplaints,
     updateComplaintStatus,
     searchComplaint,
-    filterByCategory
+    filterByCategory,
+    deleteComplaint
 } = require("../controllers/complaintController");
 
 const protect = require("../middleware/authMiddleware");
@@ -83,6 +84,14 @@ router.get(
     "/filter/category",
     protect,
     filterByCategory
+);
+
+// ================= DELETE COMPLAINT =================
+
+router.delete(
+    "/:id",
+    protect,
+    deleteComplaint
 );
 
 module.exports = router;
